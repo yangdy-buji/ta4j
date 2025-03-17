@@ -83,6 +83,11 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {
 
         Num highestHighPrice = highestHigh.getValue(index);
         Num lowestLowPrice = lowestMin.getValue(index);
+        Num denominator = highestHighPrice.minus(lowestLowPrice);
+        // 默认值 50
+        if (denominator.isZero()) {
+            return getBarSeries().numFactory().numOf(50);
+        }
 
         return indicator.getValue(index)
                 .minus(lowestLowPrice)
