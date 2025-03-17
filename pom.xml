@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ta4j</groupId>
     <artifactId>ta4j-parent</artifactId>
-    <version>0.18-SNAPSHOT</version>
+    <version>0.18</version>
     <packaging>pom</packaging>
 
     <name>Ta4j Parent</name>
@@ -35,16 +35,14 @@
     </issueManagement>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Nexus release repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>releases</id>
+            <url>https://repo.yangdy.com/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>https://repo.yangdy.com/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <ciManagement>
