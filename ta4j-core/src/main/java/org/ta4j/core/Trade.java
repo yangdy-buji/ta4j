@@ -95,6 +95,10 @@ public class Trade implements Serializable {
 
     /** The cost model for trade execution. */
     private transient CostModel costModel;
+    /**
+     * 交易关联的订单号
+     */
+    private Long orderId;
 
     /**
      * Constructor.
@@ -399,5 +403,13 @@ public class Trade implements Serializable {
      */
     public Num getValue() {
         return pricePerAsset.multipliedBy(amount);
+    }
+
+    public Long getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 }
